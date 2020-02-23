@@ -8650,13 +8650,13 @@ h1, h2, h3, h4, h5,
   .btn:hover, .btn:active, .btn:focus {
     outline: none; }
   .btn.btn-primary {
-    background: #fbb901;
-    border: 1px solid #fbb901 !important;
+    background: #033fff;
+    border: 1px solid #033fff !important;
     color: #fff !important; }
     .btn.btn-primary:hover {
-      border: 1px solid #fbb901;
-      background: #fbb901;
-      color: #fbb901; }
+      border: 1px solid #ffffff;
+      background: #ffffff;
+      color: #000 !important; }
     .btn.btn-primary.btn-outline-primary {
       border: 2px solid #fbb901 !important;
       background: transparent !important;
@@ -8931,7 +8931,7 @@ h1, h2, h3, h4, h5,
         font-size: 14px; }
       @media (max-width: 767.98px) {
         .ftco-schedule .nav-pills .nav-link {
-          color: rgba(255, 255, 255, 0.7); } }
+          color: rgba(179, 179, 179, 1); } }
       .ftco-schedule .nav-pills .nav-link:hover {
         background: #0037e9;
         color: #fff; }
