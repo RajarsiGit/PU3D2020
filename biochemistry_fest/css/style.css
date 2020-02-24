@@ -8929,7 +8929,7 @@ h1, h2, h3, h4, h5,
         font-size: 14px; }
       @media (max-width: 767.98px) {
         .ftco-schedule .nav-pills .nav-link {
-          color: rgba(179, 179, 179, 1); } }
+          color: rgba(150, 150, 150, 1); } }
       .ftco-schedule .nav-pills .nav-link:hover {
         background: #0037e9;
         color: #fff; }
