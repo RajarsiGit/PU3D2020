@@ -15,6 +15,8 @@
 	$intend = $_POST['q46_iIntend'];
 	$accom = $_POST['q47_doYou'];
 	$calc = $_POST['q49_calculation'];
+	$fee = 1.02;
+	$calc = $calc * $fee;
 	$unique_id = $_POST['unique_id'];
 
 	$name_str = implode(" ", $name);
