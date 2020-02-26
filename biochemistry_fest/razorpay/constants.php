@@ -1,6 +1,6 @@
 <?php
-	define('RAZOR_KEY_ID', 'rzp_live_Unm4EzxgGCOgoB');
-	define('RAZOR_KEY_SECRET', 'OSKBxnjxKGJ5NIgbfKlZxvL9');
+	define('RAZOR_KEY_ID', 'rzp_live_9dsrCBHbWSIeO2');
+	define('RAZOR_KEY_SECRET', 'qXppLCEjOLqe4uMAIe92tpcX');
 
 	//define('RAZOR_KEY_ID', 'rzp_test_6lTpg1E0LVrFPS');
 	//define('RAZOR_KEY_SECRET', 'ecVekFi15HTmune4wWvD0Atz');	
