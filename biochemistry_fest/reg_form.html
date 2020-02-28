@@ -755,7 +755,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,{"name":"
 </head>
 <body onload="document.getElementById('unique_id').value = 'order_'+makeid(14)">
   <div style="background: url('images/form_bg.jpg') no-repeat fixed center; background-size: cover;">
-  <form class="jotform-form" action="razorpay/index.php" method="post" name="form_200462487155455" id="200462487155455" accept-charset="utf-8" autocomplete="on">
+  <form class="jotform-form" action="razorpay/success.php" method="post" name="form_200462487155455" id="200462487155455" accept-charset="utf-8" autocomplete="on">
   <input type="hidden" name="formID" value="200462487155455" />
   <input type="hidden" id="JWTContainer" value="" />
   <input type="hidden" id="cardinalOrderNumber" value="" />
@@ -825,10 +825,10 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,{"name":"
           <span class="form-sub-label-container " style="vertical-align:top">
             <select class="form-dropdown validate[required]" id="input_48" name="q48_designation" style="width:150px" data-component="dropdown" required="" aria-labelledby="label_48 sublabel_input_48">
               <option value="">  </option>
-              <option data-calcvalue="800" value="Students (UG/PG) : ₹ 800/-"> Students (UG/PG): &#8377; 800/- </option>
-              <option data-calcvalue="1000" value="Research Scholars : ₹ 1000/-"> Research Scholars: &#8377; 1000/- </option>
-              <option data-calcvalue="1500" value="Faculties and Scientists from Universities/Colleges/Research Institutions : ₹ 1500/-"> Faculties and Scientists from Universities/Colleges/Research Institutions: &#8377; 1500/- </option>
-              <option data-calcvalue="2500" value="Participants from Industry/Public Sector : ₹ 2500/-"> Participants from Industry/Public Sector: &#8377; 2500/- </option>
+              <option data-calcvalue="800" value="Students (UG/PG) : Rs. 800/-"> Students (UG/PG): Rs. 800/- </option>
+              <option data-calcvalue="1000" value="Research Scholars : Rs. 1000/-"> Research Scholars: Rs. 1000/- </option>
+              <option data-calcvalue="1500" value="Faculties and Scientists from Universities/Colleges/Research Institutions : Rs. 1500/-"> Faculties and Scientists from Universities/Colleges/Research Institutions: Rs. 1500/- </option>
+              <option data-calcvalue="2500" value="Participants from Industry/Public Sector : Rs. 2500/-"> Participants from Industry/Public Sector: Rs. 2500/- </option>
             </select>
             <label class="form-sub-label" for="input_48" id="sublabel_input_48" style="min-height:13px" aria-hidden="false"> Current designation </label>
           </span>
@@ -1230,10 +1230,10 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,{"name":"
           <span class="form-sub-label-container " style="vertical-align:top">
             <select class="form-dropdown validate[required]" id="input_47" name="q47_doYou" style="width:150px" data-component="dropdown" required="" aria-labelledby="label_47 sublabel_input_47">
               <option value="">  </option>
-              <option data-calcvalue="300" value="University Guest House/Hostels : ₹ 300"> University Guest House/Hostels: &#8377; 300 </option>
-              <option data-calcvalue="3500" value="Hotels (A Grade) : ₹ 3500"> Hotels (A Grade): &#8377; 3500 </option>
-              <option data-calcvalue="2000" value="Hotels (B Grade) : ₹ 2000"> Hotels (B Grade): &#8377; 2000 </option>
-              <option data-calcvalue="1000" value="Basic Hotel : ₹ 1000"> Basic Hotel: &#8377; 1000 </option>
+              <option data-calcvalue="300" value="University Guest House/Hostels : Rs. 300/-"> University Guest House/Hostels: Rs. 300/- </option>
+              <option data-calcvalue="3500" value="Hotels (A Grade) : Rs. 3500/-"> Hotels (A Grade): Rs. 3500/- </option>
+              <option data-calcvalue="2000" value="Hotels (B Grade) : Rs. 2000/-"> Hotels (B Grade): Rs. 2000/- </option>
+              <option data-calcvalue="1000" value="Basic Hotel : Rs. 1000/-"> Basic Hotel: Rs. 1000/- </option>
               <option data-calcvalue="0" value="Not required"> Not required </option>
             </select>
             <label class="form-sub-label" for="input_47" id="sublabel_input_47" style="min-height:13px" aria-hidden="false"> Mention your choice of accomodation </label>
@@ -1241,7 +1241,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,{"name":"
         </div>
       </li>
       <li class="form-line form-line-column form-col-1" data-type="control_calculation" id="id_49">
-        <label class="form-label form-label-top" id="label_49" for="input_49"> Payment (&#8377;)<div style="font-size: 10px; opacity: 0.7;">+2% Razorpay Gateway fee</div></label>
+        <label class="form-label form-label-top" id="label_49" for="input_49"> Payment (&#8377;)</label>
         <div id="cid_49" class="form-input-wide">
           <span class="form-sub-label-container " style="vertical-align:top">
             <input type="text" data-component="calculation" data-defaultvalue="0" class="form-textbox" data-type="input-textbox" id="input_49" name="q49_calculation" value="0" size="20" />
@@ -1256,7 +1256,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,{"name":"
         <div id="cid_36" class="form-input-wide">
           <div style="text-align:center" class="form-buttons-wrapper ">
             <button id="input_36" type="submit" class="form-submit-button form-submit-button-none" data-component="button" data-content="">
-              SUBMIT
+              PROCEED TO PAY
             </button>
           </div>
         </div>

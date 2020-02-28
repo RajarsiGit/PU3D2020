@@ -8,18 +8,18 @@
   $jsondata = file_get_contents($myFile);
   $arr_data = json_decode($jsondata, true);
 
-  $name = $arr_data[0]['name'];
-  $email = $arr_data[0]['email'];
-  $qualification = $arr_data[0]['qualification'];
-  $designation = html_entity_decode(preg_replace('/\u([0-9A-F]+)/','&#x$1;',$arr_data[0]['designation']), ENT_COMPAT, 'UTF-8');
-  $designation = str_replace('₹', 'Rs.', $designation);
-  $add = $arr_data[0]['address']; 
-  $phone = $arr_data[0]['phone'];
-  $intend = $arr_data[0]['intend'];
-  $accom = html_entity_decode(preg_replace('/\u([0-9A-F]+)/','&#x$1;',$arr_data[0]['accomodation']), ENT_COMPAT, 'UTF-8');
-  $accom = str_replace('₹', 'Rs.', $accom);
-  $calc = $arr_data[0]['amount'];
-  $order_id = $arr_data[0]['orderid'];
+  $name = $name_str;
+  $email = $email;
+  $qualification = $qualification;
+  
+  $designation = $designation;
+  $add = $add_str; 
+  $phone = $phone_str;
+  $intend = $intend_str;
+  
+  $accom = $accom;
+  $calc = $calc;
+  $order_id = $unique_id;
 
   $conn = mysqli_connect('sql213.epizy.com', 'epiz_25235366', 'Dq6qEkTmRZUrN', 'epiz_25235366_form');
   if(!$conn){
@@ -58,7 +58,7 @@
       $mail->Subject = "Registration Confirmed";
 
       $mail->Body = "<html><body><h1>3RD NATIONAL CONFERENCE ON DRUG DISCOVERY & DEVELOPMENT - 3D 2020</h1><h3>March 6 - 7, 2020<br>At the Convention cum Cultural Centre<br>PEC Bus Stop, SH 49,<br>Pillaichavady,<br>Puducherry - 605014</h3>";
-      $mail->Body .= "<h4>Thank you for registering with us!<br>Your partial registration is confirmed! Your form details are given below:<h4>";
+      $mail->Body .= "<h4>Thank you for registering with us!<br>Your partial registration is confirmed! Your form details are given below:</h4>";
       $mail->Body .= "Registration ID: <b>".$reg_id."</b><br>";
       $mail->Body .= "Name: <b>".$name."</b><br>";
       $mail->Body .= "Qualification: <b>".$qualification."</b><br>";
@@ -67,7 +67,8 @@
       $mail->Body .= "Phone: <b>".$phone."</b><br>";
       $mail->Body .= "Email: <b>".$email."</b><br>";
       $mail->Body .= "You intend to: <b>".$intend."</b><br>";
-      $mail->Body .= "Your accomodation requirment: <b>".$accom."</b><br>";
+      $mail->Body .= "Your accomodation requirment: <b>".$accom."</b><br><br>";
+      $mail->Body .= "Your pending amount: <b>Rs.".$calc."/-</b> (Please pay using the following details:<br>Beneficiary Name: BIOCHEMISTRY CONFERENCE 2020<br>Account No: 6859387180<br>IFSC code: IDIB000P152<br>Branch: Pondicherry University Branch<br>Please ignore if already paid.)<br><br>";
       $mail->Body .= "Please show us this email during spot registration for easier confirmation of your registration.<br><br>";
       $mail->Body .= "<b>Department of Biochemistry & Molecular Biology<br>Pondicherry University<br>R.V.Nagar, Kalapet,<br>Puducherry - 605014</b></body></html>";
 
@@ -82,8 +83,9 @@
       $mail->ALtBody .= "Phone: ".$phone."\n";
       $mail->ALtBody .= "Email: ".$email."\n";
       $mail->ALtBody .= "You intend to: ".$intend."\n";
-      $mail->ALtBody .= "Your accomodation requirment: ".$accom."\n";
-      $mail->ALtBody .= "Please show us this email during spot registration for easier confirmation of your registration.\n\n";
+      $mail->ALtBody .= "Your accomodation requirment: ".$accom."\n\n";
+      $mail->AltBody .= "Your pending amount: Rs.".$calc."/- (Please pay using the following details:\nBeneficiary Name: BIOCHEMISTRY CONFERENCE 2020\nAccount No: 6859387180\nIFSC code: IDIB000P152\nBranch: Pondicherry University Branch\nPlease ignore if already paid.)\n\n";
+      $mail->AltBody .= "Please show us this email during spot registration for easier confirmation of your registration.\n\n";
       $mail->ALtBody .= "Department of Biochemistry & Molecular Biology\nPondicherry University\nR.V.Nagar, Kalapet,\nPuducherry - 605014";
 
       if(!$mail->send()) {
@@ -100,7 +102,7 @@
    <div class="container">
     <div class="text-center">
       <h1 class="display-3">Thank You!</h1>
-      <p class="lead">Your payment has been received successfully. <b>Please check your mail for further details.</b></p>
+      <p class="lead">Your partial registration is successful.<br><b>Please pay &#8377; <?php echo "$calc";?> /-</b> online via Internet Banking using the following details: <br>Beneficiary Name: <b>BIOCHEMISTRY CONFERENCE 2020</b><br>Account No: <b>6859387180</b><br>IFSC Code: <b>IDIB000P152</b><br>Branch: <b>Pondicherry University Branch</b><br>Also if possible mention your Registration ID sent in your e-mail as remarks during paymeny.<br><b>Please check your e-mail for further details.</b></p>
       <hr>
       <p>
         Having trouble? <a href="mailto:pu3d2020@gmail.com">Contact us</a>
@@ -111,5 +113,5 @@
     </div>
     </div>
 </section>
-<br><br><br><br><br><br>
+<br><br><br>
 <?php include('templates/footer.php');?>

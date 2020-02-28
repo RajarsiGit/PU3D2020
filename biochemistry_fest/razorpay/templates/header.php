@@ -11,7 +11,7 @@
   <link rel="icon" href="http://pu3d.epizy.com/razorpay/images/logo.png" sizes="192x192" />
   <link rel="apple-touch-icon-precomposed" href="http://pu3d.epizy.com/razorpay/images/logo.png" />
   <meta name="msapplication-TileImage" content="http://pu3d.epizy.com/razorpay/images/logo.png" />
-  <title>Razorpay Payment Gateway | PU 3D 2020</title>
+  <title>PU 3D 2020 Registration Confirmation</title>
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
   <!-- Custom fonts for this template -->
