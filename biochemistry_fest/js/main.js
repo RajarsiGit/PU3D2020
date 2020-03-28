@@ -273,7 +273,7 @@
 
 function makeTimer() {
 
-		var endTime = new Date("6 march 2020 00:00:00 GMT+05:30");			
+		var endTime = new Date();			
 		endTime = (Date.parse(endTime) / 1000);
 
 		var now = new Date();
@@ -303,4 +303,3 @@ setInterval(function() { makeTimer(); }, 1000);
 
 
 })(jQuery);
-
